@@ -1,0 +1,12 @@
+dmenu2
+fontconfig-ttf-ms-fonts
+htop-solarized
+i3-gaps-next-git
+i3blocks-gaps-git
+numix-icon-theme-git
+ohsnap
+peerflix
+pyradio-git
+slim-theme-arch-tetra
+thermald
+ttf-ms-fonts
