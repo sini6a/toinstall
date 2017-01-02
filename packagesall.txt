@@ -49,3 +49,4 @@ acpid
 volumeicon
 xorg-xrandr
 gvfs
+lm_sensors
