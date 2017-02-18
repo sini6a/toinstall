@@ -21,6 +21,8 @@ bindsym $mod+U exec urxvt -e yaourt -Syu --aur
 
 # FOR WINDOW
 for_window [class="(?i)thunar"] floating enable
+for_window [class="(?i)transmission-gtk"] floating enable
+for_window [class="(?i)file-roller"] floating enable
 
 # For system menus
 set $sysmenu "system:  [r]eload  [l]ogout  [p]oweroff  re[b]oot"
