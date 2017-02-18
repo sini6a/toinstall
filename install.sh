@@ -1,12 +1,11 @@
 #!/bin/bash
-#
-# if ARMARCH = TRUE then install Yaourt and install packages!
+
 x="0"
 if [ "$x" == 0 ]; then
-	if [ -f /usr/bin/yaourt ]; then
-		if [ -d /etc/X11/ ]; then
+	if [ -f /usr/bin/yaourt ]; then #CHECK IF YAOURT IS INSTALLED
+		if [ -d /etc/X11/ ]; then #CHECK IF XORG-SERVER IS INSTALLED
 			x="1"; else 
-			if [ uname -m == "armv7l" ]; then
+			if [ uname -m == "armv7l" ]; then #CHECK IF IT's ARMV7L
 				clear
 				echo Installing packages for armv7l
 				cd ~/toinstall && yaourt -Syu packagesall.txt && x="0"; else
@@ -15,7 +14,7 @@ if [ "$x" == 0 ]; then
 				cd ~/toinstall && yaourt -Syu packagesall.txt --noconfirm && x="0";
 			fi
 		fi
-	else if [ -f /usr/bin/wget ]; then
+	else if [ -f /usr/bin/wget ]; then #CHECK IF WGET IS INSTALLED FOR INSTALLING YAOURT
 		clear
 		echo Installing Yaourt and dependecies!
 		sudo pacman -S yajl --noconfirm
