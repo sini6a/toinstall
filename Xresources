@@ -1,16 +1,16 @@
-URxvt*iconFile:            /home/sini6a/.icons/term.png
+!URxvt*iconFile:            /home/sini6a/.icons/term.png
 
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Menlo-Regular:pixelsize=11
-URxvt*boldFont: xft:Menlo-Bold:pixelsize=11
+URxvt*font: xft:DejaVu Sans Mono-book:pixelsize=11
+URxvt*boldFont: xft:DejaVu Sans Mono-Bold:pixelsize=11
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
-URxvt*transparent: true
-urxvt*shading: 30
-URxvt*blurRadius: 20
+!URxvt*transparent: true
+!urxvt*shading: 10
+!URxvt*blurRadius: 20
 !urxvt*depth: 32
 !urxvt*background: rgba:0000/0000/0200/c800
 
@@ -65,7 +65,7 @@ URxvt.keysym.F11: 			perl:fullscreen:switch
 ! URXVT COLORS
 !------------------------------------------------
 
-*background: 				#111111
+*background: 				#000000
 *foreground: 				#FFFFFF
 
 !black
