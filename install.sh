@@ -49,20 +49,29 @@ if [ "$x" == 1 ]; then
 	sleep 3
 else	echo $x
 fi
+wifi=$(basename /sys/class/net/w*) 
 if [ "$x" == 2 ]; then 
 	echo POST-INSTALL 
 	echo Enabling systemctl services!
 	sleep 1
 	echo Enabling SLIM!
 	sudo systemctl enable slim && sleep 1
-	if [ -z acpi ]; then 
-		echo Not enabling ACPID! && sleep 1
-	else 
-		echo Enabling ACPID!
+	if [ "$(ls -A /sys/class/power_supply/)" ]; then 
+		echo Enabling ACPID! && sleep 1
 		sudo systemctl enable acpid && sleep 1
+	else 
+		echo Not enabling ACPID!
 	fi
-	echo Enabling NETCTL-AUTO!
-	sudo systemctl enable netctl-auto@$(basename /sys/class/net/w*) && sleep 1
+	echo Enabling NETCTL-AUTO! Detected: $wifi
+	sudo systemctl enable netctl-auto@$wifi && sleep 1
+	echo RENAMING WIFI ADAPTER IN CONFIG!
+	sed -i -- "s/wlan0/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlan1/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlp1s0/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlp2s0/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlp3s0/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlp4s0/$wifi/g" i3blocks.conf
+	sed -i -- "s/wlp5s0/$wifi/g" i3blocks.conf
 	echo POST-INSTALL Finished, please reboot!
 	sleep 1
 fi
