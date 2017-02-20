@@ -3,8 +3,8 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:DejaVu Sans Mono-book:pixelsize=11
-URxvt*boldFont: xft:DejaVu Sans Mono-Bold:pixelsize=11
+URxvt*font: xft:Misc Ohsnap-Regular:pixelsize=11
+URxvt*boldFont: xft:Misc Ohsnap-Bold:pixelsize=11
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
