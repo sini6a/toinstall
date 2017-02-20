@@ -3,14 +3,14 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Misc Ohsnap-Regular:pixelsize=11
-URxvt*boldFont: xft:Misc Ohsnap-Bold:pixelsize=11
+URxvt*font: xft:Misc Ohsnap-Regular:pixelsize=12
+URxvt*boldFont: xft:Misc Ohsnap-Bold:pixelsize=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
-!URxvt*transparent: true
-!urxvt*shading: 10
-!URxvt*blurRadius: 20
+URxvt*transparent: true
+urxvt*shading: 30
+URxvt*blurRadius: 20
 !urxvt*depth: 32
 !urxvt*background: rgba:0000/0000/0200/c800
 
