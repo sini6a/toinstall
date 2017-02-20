@@ -113,6 +113,7 @@ set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
 set $black  #000000
+set $cyan   #59ffff
 
 # set some nice colors      border     background  text
 client.focused              $green        $green         $tx $green
@@ -253,7 +254,7 @@ colors {
 	statusline $green 
 	background $black
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black $black $green
+		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
       			 inactive_workspace $black $black $white
       			 urgent_workspace   $white $white $black
