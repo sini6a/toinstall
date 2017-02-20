@@ -251,8 +251,8 @@ bar {
 	position top
         tray_output VGA-0
 colors {
-	statusline $cyan
-	background #00000060
+	statusline $green
+	background #00000080
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
