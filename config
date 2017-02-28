@@ -249,7 +249,7 @@ bar {
 	height 20
 	status_command i3blocks
 	position top
-        tray_output VGA-0
+        tray_output Primary
 colors {
 	statusline $green
 	background #00000080
