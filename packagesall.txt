@@ -6,7 +6,7 @@ faenza-icon-theme
 feh
 file-roller
 fontconfig-ttf-ms-fonts
-google-chrome
+chromium
 gparted
 gtk-theme-iris-light-git
 htop-solarized

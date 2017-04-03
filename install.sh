@@ -3,17 +3,17 @@
 x="0"
 if [ "$x" == 0 ]; then
 	if [ -f /usr/bin/yaourt ]; then #CHECK IF YAOURT IS INSTALLED
-		if [ -d /etc/X11/ ]; then #CHECK IF XORG-SERVER IS INSTALLED
+		if [ -f /usr/bin/Xorg ]; then #CHECK IF XORG-SERVER IS INSTALLED
 			x="1"; else 
 			if [ uname -m == "armv7l" ]; then #CHECK IF IT's ARMV7L
 				clear
 				echo Installing packages for armv7l
 				sleep 2
-				cd ~/toinstall && yaourt -Syu packagesall.txt && x="0"; else
+				yaourt -Sy ~/toinstall/packagesall.txt && x="0"; else
 				clear
 				echo Installing packages for non-armv7l
 				sleep 2
-				cd ~/toinstall && yaourt -Syu packagesall.txt --noconfirm && x="0";
+				yaourt -Sy ~/toinstall/packagesall.txt --noconfirm && x="0";
 			fi
 		fi
 	else if [ -f /usr/bin/wget ]; then #CHECK IF WGET IS INSTALLED FOR INSTALLING YAOURT
@@ -22,15 +22,16 @@ if [ "$x" == 0 ]; then
 		sleep 3
 		sudo pacman -S yajl --noconfirm
 		wget https://aur.archlinux.org/cgit/aur.git/snapshot/package-query.tar.gz -P ~/
-		wget https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz -P ~/
-		tar -zxf ~/*.tar.gz
-		cd ~/package-query && makepkg && sudo pacman -U *.pkg.tar.gz
-		cd ~/yaourt && makepkg && sudo pacman -U *.pkg.tar.gz 
+		wget https://aur.archlinux.org/cgit/aur.git/snapshot/yaourt.tar.gz -P ~/ &&
+		tar zxf ~/yaourt.tar.gz -C ~/ &&
+		tar zxf ~/package-query.tar.gz -C ~/
+		cd ~/package-query && makepkg && sudo pacman -U ~/package-query/*.pkg.tar.xz --noconfirm
+		cd ~/yaourt && makepkg && sudo pacman -U ~/yaourt/*.pkg.tar.xz --noconfirm
 		x="0"; else
 		clear
 		echo Installing WGET!
 		sleep 3
-		sudo pacman -S wget && x="0";
+		sudo pacman -S wget --noconfirm && x="0";
 		fi
 	fi
 fi

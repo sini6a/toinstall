@@ -55,9 +55,9 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
- for_window [class="^.*"] border pixel 0
- gaps inner 5
- gaps outer 5 
+ for_window [class="(?)urxvt"] border pixel 0
+ #gaps inner 5
+ #gaps outer 5 
 
 # print window titles of firefox windows red
 
@@ -113,7 +113,7 @@ set $red    #961717
 set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
-set $black  #000000
+set $black  #00000097
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
@@ -252,7 +252,7 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background #00000080
+	background #00000097
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
