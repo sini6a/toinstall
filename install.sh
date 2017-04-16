@@ -1,11 +1,11 @@
 #!/bin/bash
-
+os=$(uname -m)
 x="0"
 if [ "$x" == 0 ]; then
 	if [ -f /usr/bin/yaourt ]; then #CHECK IF YAOURT IS INSTALLED
 		if [ -f /usr/bin/Xorg ]; then #CHECK IF XORG-SERVER IS INSTALLED
 			x="1"; else 
-			if [ uname -m == "armv7l" ]; then #CHECK IF IT's ARMV7L
+			if [ "$os" == 'armv7l' ]; then #CHECK IF IT's ARMV7L
 				clear
 				echo Installing packages for armv7l
 				sleep 2

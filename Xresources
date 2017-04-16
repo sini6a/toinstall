@@ -9,8 +9,8 @@ URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
 URxvt*transparent: true
-urxvt*shading: 30
-URxvt*blurRadius: 20
+urxvt*shading: 10
+!URxvt*blurRadius: 20
 !urxvt*depth: 32
 !urxvt*background: rgba:0000/0000/0200/c800
 

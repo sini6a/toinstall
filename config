@@ -45,7 +45,7 @@ focus_follows_mouse no
 # AUTOSTART
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton
+# exec --no-startup-id compton
 # exec --no-startup-id conky
 exec --no-startup-id sleep 1 && transmission-gtk -m 
 exec --no-startup-id sleep 2 && volumeicon
@@ -55,9 +55,9 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
- for_window [class="(?)urxvt"] border pixel 0
- #gaps inner 5
- #gaps outer 5 
+for_window [class="^.*"] border pixel 0
+ gaps inner 5
+ gaps outer 5 
 
 # print window titles of firefox windows red
 

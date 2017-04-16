@@ -29,7 +29,6 @@ screenfetch
 scrot
 slim
 slim-theme-arch-tetra
-thermald
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
