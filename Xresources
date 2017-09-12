@@ -8,6 +8,7 @@ URxvt*boldFont: xft:Misc Ohsnap-Bold:pixelsize=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
+URxvt.internalBorder: 10
 URxvt*transparent: true
 urxvt*shading: 10
 !URxvt*blurRadius: 20

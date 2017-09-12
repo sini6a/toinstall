@@ -19,13 +19,11 @@ bindsym $mod+C exec chromium
 bindsym $mod+X exec thunar
 bindsym $mod+U exec urxvt -e yaourt -Syu --aur
 
-# KEYBOARD LAYOUT
-exec --no-startup-id "setxkbmap -layout us,mk -option grp:win_switch"
-
 # FOR WINDOW
 for_window [class="(?i)thunar"] floating enable
 for_window [class="(?i)transmission-gtk"] floating enable
 for_window [class="(?i)file-roller"] floating enable
+for_window [class="(?i)deadbeef"] floating enable
 
 # For system menus
 set $sysmenu "system:  [r]eload  [l]ogout  [p]oweroff  re[b]oot"
@@ -45,13 +43,13 @@ bindsym $mod+Shift+s sticky toggle
 #NO MOUSE FOCUS
 focus_follows_mouse no
 
+# KEYBOARD LAYOUT
+exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
+
 # AUTOSTART
-exec --no-startup-id xrandr --output default --primary
-exec --no-startup-id xcompmgr 
-# -c -r6 -F -C -o0.5
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrdb ~/.Xresources
-# exec --no-startup-id compton
+exec --no-startup-id compton
 # exec --no-startup-id conky
 exec --no-startup-id sleep 1 && transmission-gtk -m 
 exec --no-startup-id sleep 2 && volumeicon
@@ -61,9 +59,9 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-# for_window [class="^.*"] border pixel 2
- gaps inner 10
- gaps outer 5 
+for_window [class="^.*"] border pixel 4
+ gaps inner 15
+ gaps outer 5
 
 # print window titles of firefox windows red
 
@@ -81,7 +79,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Sans 0 
+font pango:Sans 7 
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -123,9 +121,9 @@ set $black  #00000097
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
-client.focused              $green        $green         $tx $green
-client.unfocused            $white $white $black $white
-client.focused_inactive     $gray        $gray $ac $gray
+client.focused              $gray $gray $tx $gray
+client.unfocused            $black $black $black $white
+client.focused_inactive     $black $black $ac $black
 client.urgent               $red         $red          $tx $red
 
 # change focus
@@ -258,7 +256,7 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background #00000099
+	background #00000097
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black

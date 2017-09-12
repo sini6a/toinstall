@@ -55,8 +55,6 @@ if [ "$x" == 2 ]; then
 	echo POST-INSTALL 
 	echo Enabling systemctl services!
 	sleep 1
-	echo Enabling SLIM!
-	sudo systemctl enable slim && sleep 1
 	if [ "$(ls -A /sys/class/power_supply/)" ]; then 
 		echo Enabling ACPID! && sleep 1
 		sudo systemctl enable acpid && sleep 1
