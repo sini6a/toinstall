@@ -13,6 +13,7 @@ set $mod Mod1
 
 #FOR SCREEN LOCKING (xautolock & i3lock-fancy-git)
 exec --no-startup-id xautolock -time 10 -locker 'lock -gf Misc-Ohsnap -- scrot -z'
+bindsym $mod+Shift+z exec xautolock -locker 'lock -gf Misc-Ohsnap -- scrot -z'
 
 # SHORTCUTS
 bindsym $mod+C exec chromium
@@ -24,6 +25,7 @@ for_window [class="(?i)thunar"] floating enable
 for_window [class="(?i)transmission-gtk"] floating enable
 for_window [class="(?i)file-roller"] floating enable
 for_window [class="(?i)deadbeef"] floating enable
+for_window [class="(?i)wicd-client.py"] floating enable
 
 # For system menus
 set $sysmenu "system:  [r]eload  [l]ogout  [p]oweroff  re[b]oot"
@@ -51,8 +53,9 @@ exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrdb ~/.Xresources
 exec --no-startup-id compton
 # exec --no-startup-id conky
-exec --no-startup-id sleep 1 && transmission-gtk -m 
-exec --no-startup-id sleep 2 && volumeicon
+exec --no-startup-id sleep 3 && transmission-gtk -m 
+exec --no-startup-id sleep 1 && volumeicon
+exec --no-startup-id sleep 2 && wcid-gtk
 
 #LIGHTS
 bindsym F6 exec light -U 10

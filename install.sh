@@ -61,8 +61,9 @@ if [ "$x" == 2 ]; then
 	else 
 		echo Not enabling ACPID!
 	fi
-	echo Enabling NETCTL-AUTO! Detected: $wifi
-	sudo systemctl enable netctl-auto@$wifi && sleep 1
+	echo Enabling Wireless Services (WICD)! Detected: $wifi
+	sudo systemctl enable wicd.service && sleep 1
+	sudo gpasswd -a $(whoami) users
 	echo RENAMING WIFI ADAPTER IN CONFIG!
 	sed -i -- "s/wlan0/$wifi/g" i3blocks.conf
 	sed -i -- "s/wlan1/$wifi/g" i3blocks.conf
@@ -71,6 +72,6 @@ if [ "$x" == 2 ]; then
 	sed -i -- "s/wlp3s0/$wifi/g" i3blocks.conf
 	sed -i -- "s/wlp4s0/$wifi/g" i3blocks.conf
 	sed -i -- "s/wlp5s0/$wifi/g" i3blocks.conf
-	echo POST-INSTALL Finished, please reboot!
+	echo POST-INSTALL Finished, please start/reboot!
 	sleep 1
 fi

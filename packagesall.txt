@@ -53,3 +53,5 @@ tumbler
 ffmpegthumbnailer
 i3lock-fancy-git
 xautolock
+wicd
+wicd-gtk
