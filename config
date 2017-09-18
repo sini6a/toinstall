@@ -12,8 +12,8 @@
 set $mod Mod1
 
 #FOR SCREEN LOCKING (xautolock & i3lock-fancy-git)
-exec --no-startup-id xautolock -time 10 -locker 'lock -gf Misc-Ohsnap -- scrot -z'
-bindsym $mod+Shift+z exec xautolock -locker 'lock -gf Misc-Ohsnap -- scrot -z'
+exec --no-startup-id xautolock -time 10 -locker 'lock -gf "Misc Ohsnap" -- scrot -z'
+bindsym $mod+Shift+z exec xautolock -locknow
 
 # SHORTCUTS
 bindsym $mod+C exec chromium
@@ -55,7 +55,7 @@ exec --no-startup-id compton
 # exec --no-startup-id conky
 exec --no-startup-id sleep 3 && transmission-gtk -m 
 exec --no-startup-id sleep 1 && volumeicon
-exec --no-startup-id sleep 2 && wcid-gtk
+exec --no-startup-id sleep 2 && wicd-gtk
 
 #LIGHTS
 bindsym F6 exec light -U 10
