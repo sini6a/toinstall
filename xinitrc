@@ -1,1 +1,1 @@
-sh .renamewifi.sh && exec i3
+exec i3 

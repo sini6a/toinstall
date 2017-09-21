@@ -19,6 +19,7 @@ bindsym $mod+Shift+z exec xautolock -locknow
 bindsym $mod+C exec chromium
 bindsym $mod+X exec thunar
 bindsym $mod+U exec urxvt -e yaourt -Syu --aur
+bindsym $mod+Z exec gscreenshot
 
 # FOR WINDOW
 for_window [class="(?i)thunar"] floating enable
@@ -55,7 +56,7 @@ exec --no-startup-id compton
 # exec --no-startup-id conky
 exec --no-startup-id sleep 3 && transmission-gtk -m 
 exec --no-startup-id sleep 1 && volumeicon
-exec --no-startup-id sleep 2 && wicd-gtk
+exec --no-startup-id sleep 2 && wicd-client --tray
 
 #LIGHTS
 bindsym F6 exec light -U 10
