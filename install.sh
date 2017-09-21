@@ -46,7 +46,6 @@ if [ "$x" == 1 ]; then
 	ln -sf ~/toinstall/i3blocks.conf ~/.i3blocks.conf
 	ln -sf ~/toinstall/Xresources ~/.Xresources
 	ln -sf ~/toinstall/xinitrc ~/.xinitrc
-	ln -sf ~/toinstall/renamewifi.sh ~/.renamewifi.sh
 	x="2";
 	echo Done! Everything is symlinked. Now POST-INSTALL!
 	sleep 3
