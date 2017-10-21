@@ -41,7 +41,7 @@ if [ "$x" == 1 ]; then
 	sleep 3
 	mkdir -p ~/.config/i3
 	mkdir ~/.config/rofi
-	cp ~/toinstall/config.rasi ~/.config/rofi/
+	cp ~/toinstall/Monokai.rasi ~/.config/rofi/config.rasi
 	ln -sfv ~/toinstall/config ~/.config/i3/config
 	ln -sfv ~/toinstall/bashrc ~/.bashrc
 	ln -sfv ~/toinstall/conkyrc ~/.conkyrc
