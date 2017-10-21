@@ -45,6 +45,8 @@ acpi
 acpid
 volumeicon
 xorg-xrandr
+pulseaudio
+pavucontrol
 gvfs
 lm_sensors
 tumbler
