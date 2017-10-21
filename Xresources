@@ -93,12 +93,3 @@ URxvt.keysym.F11: 			perl:fullscreen:switch
 !white
 *color7: 					#DDDDDD
 *color15: 					#CCCCCC
-
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #bfbfbf, argb:0002b36, #ffffff
-rofi.color-normal: #bfbfbf, #000000, #bfbfbf, #ffff00, #000000
-rofi.color-active: #bfbfbf, #ffff00, #bfbfbf, #ffff00, #cccccc
-rofi.color-urgent: #bfbfbf, #dc322f, #bfbfbf, #dc322f, #bfbfbf
