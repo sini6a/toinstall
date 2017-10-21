@@ -41,13 +41,13 @@ if [ "$x" == 1 ]; then
 	sleep 3
 	mkdir -p ~/.config/i3
 	mkdir ~/.config/rofi
-	ln -sf ~/toinstall/rofi.rasi ~/.config/rofi/config.rasi
-	ln -sf ~/toinstall/config ~/.config/i3/config
-	ln -sf ~/toinstall/bashrc ~/.bashrc
-	ln -sf ~/toinstall/conkyrc ~/.conkyrc
-	ln -sf ~/toinstall/i3blocks.conf ~/.i3blocks.conf
-	ln -sf ~/toinstall/Xresources ~/.Xresources
-	ln -sf ~/toinstall/xinitrc ~/.xinitrc
+	cp ~/toinstall/config.rasi ~/.config/rofi/
+	ln -sfv ~/toinstall/config ~/.config/i3/config
+	ln -sfv ~/toinstall/bashrc ~/.bashrc
+	ln -sfv ~/toinstall/conkyrc ~/.conkyrc
+	ln -sfv ~/toinstall/i3blocks.conf ~/.i3blocks.conf
+	ln -sfv ~/toinstall/Xresources ~/.Xresources
+	ln -sfv ~/toinstall/xinitrc ~/.xinitrc
 	x="2";
 	echo Done! Everything is symlinked. Now POST-INSTALL!
 	sleep 3
