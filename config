@@ -16,7 +16,7 @@ exec --no-startup-id xautolock -time 10 -locker 'lock -gf "Misc Ohsnap" -- scrot
 bindsym $mod+Shift+z exec xautolock -locknow
 
 # SHORTCUTS
-bindsym $mod+C exec chromium
+bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
 bindsym $mod+U exec urxvt -e yaourt -Syu --aur
 bindsym $mod+Z exec gscreenshot
