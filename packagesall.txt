@@ -5,7 +5,7 @@ dmenu2
 faenza-icon-theme
 feh
 file-roller
-chromium
+firefox
 gparted
 adapta-gtk-theme
 ttf-roboto
@@ -24,7 +24,7 @@ peerflix
 pm-utils
 pyradio-git
 ranger
-rxvt-unicode-pixbuf
+rxvt-unicode
 screenfetch
 scrot
 slim
@@ -54,5 +54,5 @@ tumbler
 ffmpegthumbnailer
 i3lock-fancy-git
 xautolock
-wicd
-wicd-gtk
+cbatticon
+light

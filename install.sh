@@ -64,8 +64,8 @@ if [ "$x" == 2 ]; then
 	else 
 		echo Not enabling ACPID!
 	fi
-	echo "Enabling Wireless Services (WICD)! Detected: $wifi"
-	sudo systemctl enable wicd.service && sleep 1
+	echo "Enabling Wireless Services (NetworkManager)! Detected: $wifi"
+	sudo systemctl enable NetworkManager
 	sudo gpasswd -a $(whoami) users
 	echo POST-INSTALL Finished, please start/reboot!
 	sleep 1
