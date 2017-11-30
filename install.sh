@@ -64,6 +64,8 @@ if [ "$x" == 2 ]; then
 	else 
 		echo Not enabling ACPID!
 	fi
+	echo "Enabling cpupower"
+	sudo systemctl enable cpupower
 	echo "Enabling Wireless Services (NetworkManager)! Detected: $wifi"
 	sudo systemctl enable NetworkManager
 	sudo gpasswd -a $(whoami) users

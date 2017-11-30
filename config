@@ -52,7 +52,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 # AUTOSTART
 exec --no-startup-id ~/.fehbg
 exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton
+# exec --no-startup-id compton
 # exec --no-startup-id conky
 exec --no-startup-id transmission-gtk -m & volumeicon & nm-applet & cbatticon 
 
@@ -61,7 +61,7 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 1
  gaps inner 15
  gaps outer 5
 
@@ -119,11 +119,11 @@ set $red    #961717
 set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
-set $black  #00000097
+set $black  #000000
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
-client.focused              $gray $gray $tx $gray
+client.focused              $gray $green $tx $cyan
 client.unfocused            $black $black $black $white
 client.focused_inactive     $black $black $ac $black
 client.urgent               $red         $red          $tx $red
@@ -259,7 +259,7 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background #00000097
+	background #000000
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
