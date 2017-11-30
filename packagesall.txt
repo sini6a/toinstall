@@ -56,3 +56,5 @@ i3lock-fancy-git
 xautolock
 cbatticon
 light
+atom
+hexchat
