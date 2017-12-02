@@ -19,3 +19,4 @@ alias msfconsole="sudo systemctl start postgresql.service && msfconsole -x \"db_
 alias dvor="ffplay rtsp://192.168.1.200:554/11"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias pyradio="pyradio --stations ~/toinstall/stations.csv"
+alias clearPacman="pacman -Rns $(pacman -Qtdq)"
