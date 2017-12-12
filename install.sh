@@ -64,8 +64,11 @@ if [ "$x" == 2 ]; then
 	else 
 		echo Not enabling ACPID!
 	fi
-	echo "Enabling cpupower"
-	sudo systemctl enable cpupower
+	if [ "$os" == 'armv7l' ]; then #CHECK IF IT's ARMV7L
+		echo "Not enabling cpupower" && sleep 1
+	else
+		sudo systemctl enable cpupower
+	fi
 	echo "Enabling Wireless Services (NetworkManager)! Detected: $wifi"
 	sudo systemctl enable NetworkManager
 	sudo gpasswd -a $(whoami) users
