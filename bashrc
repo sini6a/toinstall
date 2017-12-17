@@ -16,6 +16,6 @@ alias :wq='vim'
 alias mp3="youtube-dl -x --audio-format mp3 --audio-quality 320K"
 export VISUAL="vim"
 alias msfconsole="sudo systemctl start postgresql.service && msfconsole -x \"db_connect ${USER}@msf\" && sudo systemctl stop postgresql.service"
-alias dvor="ffplay rtsp://192.168.1.200:554/11"
+alias dvor="ffplay -an rtsp://192.168.1.200:554/11"
 alias unlock="sudo rm /var/lib/pacman/db.lck"
 alias pyradio="pyradio --stations ~/toinstall/stations.csv"
