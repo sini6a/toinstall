@@ -62,7 +62,7 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 4
  gaps inner 15
  gaps outer 5
 

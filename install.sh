@@ -72,6 +72,9 @@ if [ "$x" == 2 ]; then
 	echo "Enabling Wireless Services (NetworkManager)! Detected: $wifi"
 	sudo systemctl enable NetworkManager
 	sudo gpasswd -a $(whoami) users
-	echo POST-INSTALL Finished, please start/reboot!
-	sleep 1
+	echo "Enabling SLIM"
+	sudo systemctl enable slim
+	echo POST-INSTALL Finished! Now I will start SLIM for you
+	sleep 2
+	sudo systemctl start slim
 fi

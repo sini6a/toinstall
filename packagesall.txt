@@ -1,4 +1,7 @@
 compton
+networkmanager
+network-manager-applet
+gnome-keyring
 conky
 cpupower
 dmenu2
@@ -20,7 +23,6 @@ notification-daemon
 numix-icon-theme-git
 ohsnap
 p7zip
-peerflix
 pm-utils
 pyradio-git
 ranger
@@ -56,5 +58,4 @@ i3lock-fancy-git
 xautolock
 cbatticon
 light
-atom
 hexchat
