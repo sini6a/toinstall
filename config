@@ -263,12 +263,12 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background $black00
+	background $black20
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black00 $black00 $cyan
+		    	 focused_workspace  $black20 $black20 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black00 $black00 $white
-      			 urgent_workspace   $white $white $black00
+      			 inactive_workspace $black20 $black20 $white
+      			 urgent_workspace   $white $white $black20
         }
 }
 
