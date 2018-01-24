@@ -50,14 +50,13 @@ focus_follows_mouse no
 exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 
 # AUTOSTART
-exec --no-startup-id xrandr --output default --primary
+# exec --no-startup-id xrandr --output default --primary			# Needed only in special cases (Asus C201 + xf86-video-turbo
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
-exec --no-startup-id xcompmgr
-exec --no-startup-id conky
-exec --no-startup-id thunar --daemon						# Thunar Daemon
+exec --no-startup-id xcompmgr							# Composite
 # exec --no-startup-id compton							# Compton Comp Manager
-# exec --no-startup-id conky							# Conky
+exec --no-startup-id conky							# Conky
+exec --no-startup-id thunar --daemon						# Thunar Daemon
 exec --no-startup-id transmission-gtk -m & volumeicon & nm-applet & cbatticon 	# Transmission in tray, Volumeicon tray, NetworkManager tray, Battery icon tray
 
 #LIGHTS
@@ -123,7 +122,7 @@ set $red    #961717
 set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
-set $black  #00000000
+set $black  #000000
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
@@ -263,12 +262,12 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background $black
+	background $black00
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black $black $cyan
+		    	 focused_workspace  $black00 $black00 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black $black $white
-      			 urgent_workspace   $white $white $black
+      			 inactive_workspace $black00 $black00 $white
+      			 urgent_workspace   $white $white $black00
         }
 }
 

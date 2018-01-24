@@ -11,7 +11,7 @@ no_buffers yes
 text_buffer_size 2048
 
 gap_x 540
-gap_y 450
+gap_y 100
 minimum_size 500 700 
 maximum_width 400
 own_window yes
@@ -24,7 +24,7 @@ border_inner_margin 0
 border_outer_margin 0
 alignment tl
 
-draw_shades yes
+draw_shades no
 draw_outline no
 draw_borders no
 draw_graph_borders no
@@ -36,7 +36,7 @@ xftfont Open Sans:size=10
 xftalpha 1
 uppercase no
 
-default_color ffffff
+default_color ffa500
 color1 DDDDDD
 color2 AAAAAA
 color3 888888
