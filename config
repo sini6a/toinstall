@@ -53,6 +53,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 exec --no-startup-id xrandr --output default --primary
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
+exec --no-startup-id conky
 exec --no-startup-id thunar --daemon						# Thunar Daemon
 # exec --no-startup-id compton							# Compton Comp Manager
 # exec --no-startup-id conky							# Conky
