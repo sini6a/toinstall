@@ -48,6 +48,7 @@ if [ "$x" == 1 ]; then
 	ln -sfv ~/toinstall/i3blocks.conf ~/.i3blocks.conf
 	ln -sfv ~/toinstall/Xresources ~/.Xresources
 	ln -sfv ~/toinstall/xinitrc ~/.xinitrc
+	ln -sfv ~/toinstall/compton.conf ~/.compton.conf
 	x="2";
 	echo Done! Everything is symlinked. Now POST-INSTALL!
 	sleep 3

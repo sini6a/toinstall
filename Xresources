@@ -9,11 +9,11 @@ URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
 URxvt.internalBorder: 10
-URxvt*transparent: true
-urxvt*shading: 10
+!URxvt*transparent: true
+!urxvt*shading: 10
 !URxvt*blurRadius: 20
-!urxvt*depth: 32
-!urxvt*background: rgba:0000/0000/0200/c800
+urxvt*depth: 32
+urxvt*background: rgba:0000/0000/0200/c800
 
 ! URXVT ENABLE LINK SUPPORT
 !------------------------------------------------
