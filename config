@@ -121,14 +121,15 @@ set $gray   #d3d3d3
 set $red    #961717
 set $white  #000000
 set $green  #32CD32	
+set $dgreen #3F5F3F
 set $white  #FFFFFF
 set $black  #000000
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
 client.focused              $gray $green $tx $cyan
-client.unfocused            $black $black $black $white
-client.focused_inactive     $black $black $ac $black
+client.unfocused            $dgreen $dgreen $dgreen $white
+client.focused_inactive     $dgreen $dgreen $ac $dgreen
 client.urgent               $red         $red          $tx $red
 
 # change focus
