@@ -4,7 +4,6 @@ network-manager-applet
 gnome-keyring
 conky
 cpupower
-dmenu2
 faenza-icon-theme
 feh
 file-roller
@@ -59,3 +58,4 @@ xautolock
 cbatticon
 light
 hexchat
+gscreenshoot

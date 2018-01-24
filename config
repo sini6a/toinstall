@@ -18,8 +18,8 @@ bindsym $mod+Shift+z exec xautolock -locknow
 # SHORTCUTS
 bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
-bindsym $mod+U exec urxvt -e yaourt -Syu --aur
-bindsym $mod+Z exec gscreenshot
+bindsym $mod+U exec urxvt -e yaourt -Syua
+bindsym Shift+Enter exec gscreenshot
 
 # FOR WINDOW
 for_window [class="(?i)thunar"] floating enable
@@ -50,6 +50,7 @@ focus_follows_mouse no
 exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 
 # AUTOSTART
+exec --no-startup-id xrandr --output default --primary
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
 exec --no-startup-id thunar --daemon						# Thunar Daemon
