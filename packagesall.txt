@@ -1,17 +1,16 @@
-compton
 networkmanager
 network-manager-applet
 gnome-keyring
 conky
 cpupower
-faenza-icon-theme
+xcompmgr
 feh
 file-roller
 firefox
 gparted
 adapta-gtk-theme
 ttf-roboto
-htop-solarized
+htop
 i3-gaps-next-git
 i3blocks-gaps-git
 i3lock
@@ -19,7 +18,6 @@ lxappearance
 mplayer
 mps-youtube
 notification-daemon
-numix-icon-theme-git
 ohsnap
 p7zip
 pm-utils

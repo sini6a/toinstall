@@ -53,6 +53,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 exec --no-startup-id xrandr --output default --primary
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
+exec --no-startup-id xcompmgr
 exec --no-startup-id conky
 exec --no-startup-id thunar --daemon						# Thunar Daemon
 # exec --no-startup-id compton							# Compton Comp Manager
@@ -122,7 +123,7 @@ set $red    #961717
 set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
-set $black  #000000
+set $black  #00000095
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
@@ -262,7 +263,7 @@ bar {
         tray_output Primary
 colors {
 	statusline $green
-	background #000000
+	background $black
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black $black $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
