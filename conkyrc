@@ -24,11 +24,11 @@ border_inner_margin 0
 border_outer_margin 0
 alignment tl
 
-draw_shades no
+draw_shades yes
 draw_outline no
 draw_borders no
 draw_graph_borders no
-default_shade_color 112422
+default_shade_color 000000
 
 override_utf8_locale yes
 use_xft yes
