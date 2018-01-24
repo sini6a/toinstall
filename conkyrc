@@ -36,7 +36,7 @@ xftfont Open Sans:size=10
 xftalpha 1
 uppercase no
 
-default_color ffa500
+default_color 008000
 color1 DDDDDD
 color2 AAAAAA
 color3 888888
@@ -45,7 +45,7 @@ color4 EF5A29
 
 
 TEXT
-${font Roboto Condensed:weight=Light :size=98}${time %I:%M}${font}
+${font Roboto Condensed:weight=Light :size=98}${time %H:%M}${font}
 
 
-${font Roboto Condensed:weight=Light:size=22} ${time %A %B %d}${font}
+${font Roboto Condensed:weight=Light:size=22} ${time %d %B | %A}${font}
