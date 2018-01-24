@@ -123,7 +123,7 @@ set $red    #961717
 set $white  #000000
 set $green  #32CD32	
 set $white  #FFFFFF
-set $black  #00000095
+set $black  #00000000
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
