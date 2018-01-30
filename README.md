@@ -1,4 +1,4 @@
-# toinstall
+# Details
 This are my personal dot files. 
 
 You can install all automatically. You just need fist of to be connected to internet. 
