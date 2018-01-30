@@ -10,7 +10,7 @@ For now only my post-install script works as expected and I am working on OS-ins
 3. Create user, give it root rights, and log in (see below).
 3. Install GIT and clone repository (see below).
 4. Execute ./post_install.sh
-After everything is installed and symlinked you should reboot system and greeted with slim login
+<br />After everything is installed and symlinked you should reboot system and greeted with slim login
 
 - Creating user
 As root:
@@ -19,7 +19,7 @@ As root:
 3. visudo
 
 - Installing GIT and cloning repository:
-Repo should be cloned in home directory in order for script to work properly.
+<br />Repo should be cloned in home directory in order for script to work properly.
 1. pacman -S git
 2. cd ~/ && git clone http://github.com/sini6a/toinstall
 
