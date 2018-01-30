@@ -3,7 +3,7 @@ This are my personal dot files.
 
 You can use and modify for your personal use.
 For now only my post-install script works as expected and I am working on OS-install script.
-These are the steps I use to make same environment on multiple PC's:
+<br />These are the steps I use to make same environment on multiple PC's:
 1. Install Arch Linux.
 2. Connect to WIFI using wifi-menu.
 3. Create user, give it root rights, and log in (see below).
