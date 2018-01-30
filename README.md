@@ -9,5 +9,7 @@ This is still WIP so please be patient.
 by sini6a.
 
 # Screenshots
+Fake Busy:
 ![Alt text](/screenshots/scrot1.png?raw=true "Screenshot Fake Busy")
+Clean:
 ![Alt text](/screenshots/scrot2.png?raw=true "Screenshot Clean")
