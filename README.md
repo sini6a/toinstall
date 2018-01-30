@@ -8,5 +8,5 @@ You can check packages.txt to see what packages are installed to your system and
 This is still WIP so please be patient. 
 by sini6a.
 
-![Alt text](/screenshots/scrot1.png?raw=true "Screenshot Fake Busy")
+H1 Screenshots![Alt text](/screenshots/scrot1.png?raw=true "Screenshot Fake Busy")
 ![Alt text](/screenshots/scrot2.png?raw=true "Screenshot Clean")
