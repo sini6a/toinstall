@@ -4,12 +4,12 @@ os=$(uname -m)
 
 echo "--- Installing WGET ---"
 sleep 3
-sudo pacman -S wget --noconfirm --needed && clear && echo "--> WGET Installed! <--" && sleep 3
+sudo pacman -S wget --noconfirm --needed && echo "--> WGET Installed! <--" && sleep 3 && clear 
 
 clear
-echo "--- Installing YAYL ---"
+echo "--- Installing YAJL ---"
 sleep 3
-sudo pacman -S yayl --noconfirm --needed && clear && echo "--> YAYL Installed! <--" && sleep 3
+sudo pacman -S yajl --noconfirm --needed && echo "--> YAJL Installed! <--" && sleep 3 && clear
 
 clear
 echo "--- Installing YAOURT ---"
@@ -24,12 +24,11 @@ tar zxf ~/package-query.tar.gz -C ~/
 cd ~/package-query && makepkg && sudo pacman -U ~/package-query/*.pkg.tar.xz --noconfirm --needed
 cd ~/yaourt && makepkg && sudo pacman -U ~/yaourt/*.pkg.tar.xz --noconfirm --needed
 # Cleaning up
-rm -r ~/package-query
-rm -r ~/yaourt
-clear
-echo "--> YAOURT Installed! <--" && sleep 3
+rm -r ~/package-query*
+rm -r ~/yaourt*
+echo "--> YAOURT Installed! <--" && sleep 3 && clear
 
-clear
+# Install packages from packages.txt
 if [ "$os" == 'armv7l' ]; then
 echo "--- Installing packages (armv7l) ---"
 sleep 3
@@ -79,6 +78,7 @@ sudo gpasswd -a $(whoami) users
 # Enable SLIM
 sudo systemctl enable slim
 echo "-> SLIM Enabled." && sleep 1
+echo ""
 echo "--> Everthing is installed and enabled.             <--"
 echo "--> You should now reboot system and see the magic. <--"
 echo "--> Press CTRL+C to terminate this window.          <--" && sleep infinity
