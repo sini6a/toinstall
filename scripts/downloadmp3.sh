@@ -10,7 +10,7 @@ read -p "--> Enter session name: " session
 if [ "$session" == "" ]; then
 session=$(date '+%d.%m.%Y')
 fi
-mkdir -p ~/Desktop/MP3s/$session
+mkdir -p ~/Desktop/MP3s/"$session"
 
 clear
 echo -e "--> Download from web to MP3 320K."
@@ -26,6 +26,6 @@ i=$[$i+1]
 read -p "-> Enter URL: " URL
 echo -e "${RED}-> $(youtube-dl -e $URL)${NC}"
 echo "-> Downloading..."
-youtube-dl --quiet -x --audio-format mp3 --audio-quality 320K -o "~/Desktop/MP3s/$session/%(title)s.%(ext)s" $URL
+youtube-dl --quiet -x --audio-format mp3 --audio-quality 320K -o "~/Desktop/MP3s/$session/%(title)s.%(ext)s" "$URL"
 echo "-> $i song/s downloaded! "
 done

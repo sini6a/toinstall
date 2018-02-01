@@ -53,7 +53,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 # exec --no-startup-id xrandr --output default --primary			# Needed only in special cases (Asus C201 + xf86-video-turbo
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
-exec --no-startup-id xcompmgr							# Composite
+exec --no-startup-id xcompmgr -c -l 0 -t 0 -r 3 -o .65							# Composite
 # exec --no-startup-id compton							# Compton Comp Manager
 exec --no-startup-id conky							# Conky
 exec --no-startup-id thunar --daemon						# Thunar Daemon
@@ -65,7 +65,7 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-for_window [class="^.*"] border pixel 4
+for_window [class="^.*"] border pixel 0
  gaps inner 10
  gaps outer 1
 
@@ -98,7 +98,7 @@ font pango:Sans 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt --background-expr 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -263,13 +263,13 @@ bar {
 	position top
         tray_output Primary
 colors {
-	statusline $green
-	background $black20
+	statusline $white
+	background $black00
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black20 $black20 $cyan
+		    	 focused_workspace  $black00 $black00 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black20 $black20 $white
-      			 urgent_workspace   $white $white $black20
+      			 inactive_workspace $black00 $black00 $white
+      			 urgent_workspace   $white $white $black00
         }
 }
 

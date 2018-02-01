@@ -8,12 +8,13 @@ URxvt*boldFont: xft:Misc Ohsnap-Bold:pixelsize=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
+URxvt*background-expr: 'scale keep { root }'
 URxvt.internalBorder: 10
 !URxvt*transparent: true
 !urxvt*shading: 10
 !URxvt*blurRadius: 20
-urxvt*depth: 32
-urxvt*background: rgba:0000/0000/0200/c800
+!urxvt*depth: 64
+!urxvt*background: rgba:0000/0000/0200/c800
 
 ! URXVT ENABLE LINK SUPPORT
 !------------------------------------------------
@@ -23,7 +24,7 @@ URxvt.perl-ext-common: default,matcher,tabbedex,vtwheel,clipboard
 URxvt.matcher.button:   1
 URxvt.perl-ext:      default,url-select
 URxvt.keysym.M-u: perl:url-select:select_next
-URxvt.url-select.launcher:   /usr/bin/dwb
+URxvt.url-select.launcher:   /usr/bin/firefox
 URxvt.url-select.underline: true
 
 !disable the fucking bell
@@ -35,7 +36,6 @@ URxvt.insecure: 			false
 !URxvt.keysym.M-c: 			perl:clipboard:copy
 !URxvt.keysym.M-v: 			perl:clipboard:pasteq
 
-urxvt.geometry: 135x37
 
 ! URXVT SCROLLBAR AND CURSOR STYLE
 !------------------------------------------------
