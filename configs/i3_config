@@ -53,7 +53,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 # exec --no-startup-id xrandr --output default --primary			# Needed only in special cases (Asus C201 + xf86-video-turbo
 exec --no-startup-id ~/.fehbg							# BACKGROUND
 exec --no-startup-id xrdb ~/.Xresources						# Xresources
-exec --no-startup-id xcompmgr -c -l 0 -t 0 -r 3 -o .65							# Composite
+exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65							# Composite
 # exec --no-startup-id compton							# Compton Comp Manager
 exec --no-startup-id conky							# Conky
 exec --no-startup-id thunar --daemon						# Thunar Daemon
@@ -257,14 +257,14 @@ bindsym $mod+r mode "resize"
 bar {
 	i3bar_command i3bar -t
     	strip_workspace_numbers yes
-	font xft:Misc Ohsnap Bold 12
+	font xft:Consolas Bold 8
 	height 20
 	status_command i3blocks
 	position top
         tray_output Primary
 colors {
 	statusline $white
-	background $black00
+	background $black70
             					    #Border #Backgr #Font
 		    	 focused_workspace  $black00 $black00 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black

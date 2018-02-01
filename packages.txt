@@ -23,7 +23,8 @@ p7zip
 pm-utils
 pyradio-git
 ranger
-rxvt-unicode
+rxvt-unicode-pixbuf
+consolas-font
 screenfetch
 scrot
 slim
