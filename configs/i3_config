@@ -66,8 +66,8 @@ bindsym F7 exec light -A 10
 
 # For gaps and no borders
 for_window [class="^.*"] border pixel 0
- gaps inner 10
- gaps outer 1
+ gaps inner 15
+ gaps outer 5
 
 # print window titles of firefox windows red
 
@@ -266,10 +266,10 @@ colors {
 	statusline $white
 	background $black70
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black00 $black00 $cyan
+		    	 focused_workspace  $black70 $black70 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black00 $black00 $white
-      			 urgent_workspace   $white $white $black00
+      			 inactive_workspace $black70 $black70 $white
+      			 urgent_workspace   $white $white $black70
         }
 }
 
