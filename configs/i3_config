@@ -65,7 +65,7 @@ bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-for_window [class="^.*"] border pixel 0
+for_window [class="^.*"] border pixel 1
  gaps inner 15
  gaps outer 5
 
@@ -128,9 +128,9 @@ set $black  #000000
 set $cyan   #59ffff
 
 # set some nice colors      border     background  text
-client.focused              $gray $green $tx $cyan
-client.unfocused            $dgreen $dgreen $dgreen $white
-client.focused_inactive     $dgreen $dgreen $ac $dgreen
+client.focused              $dgreen80 $dgreen80 $tx $dgreen80
+client.unfocused            $black $black $black $white
+client.focused_inactive     $black $black $ac $black
 client.urgent               $red         $red          $tx $red
 
 # change focus
@@ -263,13 +263,13 @@ bar {
 	position top
         tray_output Primary
 colors {
-	statusline $white
-	background $black70
+	statusline $green
+	background $black00
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black70 $black70 $cyan
+		    	 focused_workspace  $black00 $black00 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black70 $black70 $white
-      			 urgent_workspace   $white $white $black70
+      			 inactive_workspace $black00 $black00 $white
+      			 urgent_workspace   $white $white $black00
         }
 }
 
