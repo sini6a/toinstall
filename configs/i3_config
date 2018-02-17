@@ -257,7 +257,7 @@ bindsym $mod+r mode "resize"
 bar {
 	i3bar_command i3bar -t
     	strip_workspace_numbers yes
-	font xft:Consolas Bold 8
+	font xft:Misc Ohsnap Bold 11
 	height 20
 	status_command i3blocks
 	position top

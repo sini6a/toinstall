@@ -3,8 +3,8 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Consolas-Regular:size=11
-URxvt*boldFont: xft:Consolas-Bold:size=11
+URxvt*font: xft:Misc Ohsnap-Regular:size=12
+URxvt*boldFont: xft:Misc Ohsnap-Bold:size=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
