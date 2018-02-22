@@ -1,1 +1,3 @@
+[[ -f ~/.Xresources ]] && xrdb -merge ~/.Xresources
+
 mplayer -fs ~/ACER.mp4 && exec i3 

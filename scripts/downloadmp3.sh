@@ -38,7 +38,7 @@ echo -e "${GREEN}$(cat ~/.mp3tmp)${NC}"
 echo
 
 echo "--> Downloading $(cat ~/.mp3tmp | wc -l) item(s) ..."
-youtube-dl -s --quiet --ignore-errors -x --audio-format mp3 --audio-quality 320K -o "~/Desktop/MP3s/$session/%(title)s.%(ext)s" "$URL"
-sleep 3
 rm ~/.mp3tmp
+youtube-dl --quiet --ignore-errors -x --audio-format mp3 --audio-quality 320K -o "~/Desktop/MP3s/$session/%(title)s.%(ext)s" "$URL"
+sleep 3
 done

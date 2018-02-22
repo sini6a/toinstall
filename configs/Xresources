@@ -8,7 +8,7 @@ URxvt*boldFont: xft:Misc Ohsnap-Bold:size=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
-URxvt*background-expr: 'scale keep { root }'
+URxvt*background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
 URxvt.internalBorder: 10
 !URxvt*transparent: true
 !urxvt*shading: 10
