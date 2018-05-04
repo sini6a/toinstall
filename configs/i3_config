@@ -55,7 +55,7 @@ exec --no-startup-id ~/.fehbg							# BACKGROUND
 # exec --no-startup-id xrdb ~/.Xresources						# Xresources
 exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65							# Composite
 # exec --no-startup-id compton							# Compton Comp Manager
-exec --no-startup-id conky							# Conky
+# exec --no-startup-id conky							# Conky
 exec --no-startup-id thunar --daemon						# Thunar Daemon
 exec --no-startup-id transmission-gtk -m & volumeicon & nm-applet & cbatticon 	# Transmission in tray, Volumeicon tray, NetworkManager tray, Battery icon tray
 exec --no-startup-id hexchat
@@ -98,7 +98,7 @@ font pango:Sans 7
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt --background-expr 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
+bindsym $mod+Return exec i3-sensible-terminal
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -263,13 +263,13 @@ bar {
 	position top
         tray_output Primary
 colors {
-	statusline $green
-	background $black00
+	statusline $white
+	background $black50
             					    #Border #Backgr #Font
-		    	 focused_workspace  $black00 $black00 $cyan
+		    	 focused_workspace  $black50 $black50 $cyan
       			 active_workspace   #FFFF7F #FFFF7F $black
-      			 inactive_workspace $black00 $black00 $white
-      			 urgent_workspace   $white $white $black00
+      			 inactive_workspace $black50 $black50 $white
+      			 urgent_workspace   $white $white $black50
         }
 }
 
