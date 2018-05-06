@@ -12,7 +12,7 @@
 set $mod Mod1
 
 #FOR SCREEN LOCKING (xautolock & i3lock-fancy-git)
-exec --no-startup-id xautolock -time 10 -locker 'lock -gf "Misc Ohsnap" -- scrot -z'
+exec --no-startup-id xautolock -time 10 -locker 'i3lock-fancy -f Fantasque-Sans-Mono-Bold -g'
 bindsym $mod+Shift+z exec xautolock -locknow
 
 # SHORTCUTS
