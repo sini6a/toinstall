@@ -57,6 +57,5 @@ xautolock
 cbatticon
 light
 hexchat
-gscreenshoot
 compton
 awesome-terminal-fonts

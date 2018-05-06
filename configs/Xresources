@@ -3,17 +3,17 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Misc Ohsnap-Regular:size=12
-URxvt*boldFont: xft:Misc Ohsnap-Bold:size=12
+URxvt*font: xft:Fantasque Sans Mono-Regular:size=11
+URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=11
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
 !URxvt*background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
-URxvt.internalBorder: 10
-URxvt*transparent: true
-urxvt*shading: 20
-!URxvt*blurRadius: 20
-!urxvt*depth: 64
+URxvt.internalBorder: 15
+URxvt*transparent: false
+urxvt*shading: 24
+URxvt*blurRadius: 20
+urxvt*depth: 64
 !urxvt*background: rgba:0000/0000/0200/c800
 
 ! URXVT ENABLE LINK SUPPORT
@@ -65,8 +65,8 @@ URxvt.keysym.F11: 			perl:fullscreen:switch
 ! URXVT COLORS
 !------------------------------------------------
 
-*background:   [97]#282a36
-*foreground:   #eff0eb
+*background:   #404040
+*foreground:   #d3d3d3
 *cursorColor:  #9aedfe
 
 *color0:      #33303b

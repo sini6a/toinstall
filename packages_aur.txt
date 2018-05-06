@@ -1,0 +1,2 @@
+otf-fantasque-sans-mono
+gscreenshot
