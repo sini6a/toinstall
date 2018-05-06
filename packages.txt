@@ -58,4 +58,9 @@ cbatticon
 light
 hexchat
 compton
+
+powerline
+powerline-fonts
+redshift
+
 awesome-terminal-fonts

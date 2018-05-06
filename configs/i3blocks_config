@@ -25,7 +25,7 @@
 # The top properties below are applied to every block, but can be overridden.
 # Each block command defaults to the script name to avoid boilerplate.
 command=/usr/lib/i3blocks/$BLOCK_NAME
-separator_block_width=15
+separator_block_width=10
 markup=none
 
 # Volume indicator
@@ -45,14 +45,14 @@ signal=10
 #
 # The type defaults to "mem" if the instance is not specified.
 [memory]
-label=MEM
-separator=false
+label=
+separator=true
 interval=30
 
 [memory]
-label=SWAP
+label=
 instance=swap
-separator=false
+separator=true
 interval=30
 
 # Disk usage
@@ -61,7 +61,7 @@ interval=30
 # The script may be called with a optional argument to set the alert
 # (defaults to 10 for 10%).
 [disk]
-label=HOME
+label=FREE
 #instance=/mnt/data
 interval=30
 
@@ -81,6 +81,7 @@ interval=0.5
 separator=false
 
 [bandwidth]
+label=
 #instance=eth0
 interval=1
 
