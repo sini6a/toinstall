@@ -18,7 +18,7 @@ bindsym $mod+Shift+z exec xautolock -locknow
 # SHORTCUTS
 bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
-bindsym $mod+U exec urxvt -e yaourt -Syua
+bindsym $mod+U exec urxvt -e 'yaourt -Syua || sleep infinity'
 bindsym Shift+Enter exec gscreenshot
 
 # FOR WINDOW
