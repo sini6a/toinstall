@@ -1,3 +1,4 @@
+luv-icon-theme-git
 otf-fantasque-sans-mono
 gscreenshot
 caffeine-ng

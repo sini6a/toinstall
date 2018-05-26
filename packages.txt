@@ -1,5 +1,7 @@
+archlinux-keyring
 networkmanager
 network-manager-applet
+ttf-liberation
 gnome-keyring
 conky
 cpupower
