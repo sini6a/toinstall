@@ -2,9 +2,10 @@
 clear
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-#$DIR/scripts/install_wget.sh        # Script dependency
-#$DIR/scripts/install_yajl.sh        # Script dependency
-#$DIR/scripts/install_yaourt.sh      # Installing yaourt
+sudo pacman -S archlinux-keyring --noconfirm
+$DIR/scripts/install_wget.sh        # Script dependency
+$DIR/scripts/install_yajl.sh        # Script dependency
+$DIR/scripts/install_yaourt.sh      # Installing yaourt
 $DIR/scripts/install_packages.sh    # Install packages from "packages.txt" using yaourt
 $DIR/scripts/symlink.sh             # Symlink configs to be updated with repo
 $DIR/scripts/system_services.sh     # Enable system services
