@@ -26,18 +26,18 @@ echo
 }
 
 while true; do
-playlist_items="$(cat $LOCATION$SESSION/$SESSION.txt | wc -l)"
+playlist_items="$(cat "$LOCATION""$SESSION"/"$SESSION".txt | wc -l)"
 main_prompt
 read -p '-> Enter URL: ' URL
 echo -e "--> Loading, please wait ..."
 
 if [ "$URL" == "ls" ]; then
-echo -e "${GREEN}$(cat $LOCATION$SESSION/$SESSION.txt)${NC}" | more
+echo -e "${GREEN}$(cat "$LOCATION""$SESSION"/"$SESSION".txt)${NC}" | more
 echo
 read -n 1 -s -r -p "-> Press any key to continue"
 else
 youtube-dl -e --quiet --ignore-errors "$URL" >> ~/.mp3tmp
-cat ~/.mp3tmp >> "$LOCATION$SESSION/$SESSION.txt"
+cat ~/.mp3tmp >> "$LOCATION""$SESSION"/"$SESSION".txt
 num_of_items="$(cat ~/.mp3tmp | wc -l)"
 
 echo
