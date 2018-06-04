@@ -18,7 +18,7 @@ bindsym $mod+Shift+z exec xautolock -locknow
 # SHORTCUTS
 bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
-bindsym $mod+U exec urxvt -e yaourt -Syua || sleep infinity
+bindsym $mod+U exec urxvt --hold -e yaourt -Syua && echo "System upgrade completed!" && sleep infinity
 bindsym Shift+Enter exec gscreenshot
 
 # FOR WINDOW
@@ -50,17 +50,20 @@ focus_follows_mouse no
 exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 
 # AUTOSTART
-# exec --no-startup-id xrandr --output default --primary			# Needed only in special cases (Asus C201 + xf86-video-turbo
-exec --no-startup-id ~/.fehbg							# BACKGROUND
-# exec --no-startup-id xrdb ~/.Xresources						# Xresources
-exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65							# Composite
-# exec --no-startup-id compton							# Compton Comp Manager
-# exec --no-startup-id conky							# Conky
-exec --no-startup-id thunar --daemon						# Thunar Daemon
-exec --no-startup-id transmission-gtk -m & volumeicon & nm-applet & cbatticon 	# Transmission in tray, Volumeicon tray, NetworkManager tray, Battery icon tray
+# exec --no-startup-id xrandr --output default --primary
+# exec --no-startup-id xrdb ~/.Xresources
+# exec --no-startup-id compton
+# exec --no-startup-id conky
+
+exec --no-startup-id ~/.fehbg
+exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65
+exec --no-startup-id thunar --daemon
+exec --no-startup-id transmission-gtk -m
+exec --no-startup-id volumeicon
+exec --no-startup-id nm-applet
+exec --no-startup-id cbatticon
 exec --no-startup-id redshift-gtk
 exec --no-startup-id caffeine
-exec --no-startup-id uget
 
 #LIGHTS
 bindsym F6 exec light -U 10
@@ -76,10 +79,6 @@ gaps inner 10
 # For NUMLOCK and CAPSLOCK icon tray in i3blocks
 bindsym --release Caps_Lock exec pkill -SIGRTMIN+11 i3blocks
 bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
-
-# For Laptop Backlight
-# bindsym XF86MonBrightnessUp exec xbacklight +10
-# bindsym XF86MonBrightnessDown exec xbacklight -10
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
@@ -260,7 +259,7 @@ bar {
 	i3bar_command i3bar
     	strip_workspace_numbers yes
 	font xft:Fantasque Sans Mono Bold 9
-	height 24
+	height 28
 	status_command i3blocks
 	position top
         tray_output Primary
