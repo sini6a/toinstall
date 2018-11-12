@@ -5,7 +5,6 @@ caffeine-ng
 pop-gtk-theme-bin
 i3-gaps-next-git
 i3blocks-gaps-git
-ohsnap
 pyradio-git
 rxvt-unicode-pixbuf
 slim-theme-arch-tetra

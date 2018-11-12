@@ -18,7 +18,7 @@ bindsym $mod+Shift+z exec xautolock -locknow
 # SHORTCUTS
 bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
-bindsym $mod+U exec urxvt --hold -e yaourt -Syua && echo "System upgrade completed!" && sleep infinity
+bindsym $mod+U exec urxvt --hold -e yay -Syu && echo "System upgrade completed!" && sleep infinity
 bindsym Shift+Enter exec gscreenshot
 
 # FOR WINDOW
@@ -256,13 +256,13 @@ bindsym $mod+r mode "resize"
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-	i3bar_command i3bar
+	i3bar_command i3bar -t
     	strip_workspace_numbers yes
 	font xft:Fantasque Sans Mono Bold 9
 	height 28
 	status_command i3blocks
 	position top
-        tray_output Primary
+        tray_output default
 colors {
 	statusline #d3d3d3
 	background $gray
