@@ -1,3 +1,4 @@
+rxvt-unicode
 archlinux-keyring
 networkmanager
 network-manager-applet

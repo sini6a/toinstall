@@ -3,13 +3,13 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Fantasque Sans Mono-Regular:size=11
-URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=11
+URxvt*font: xft:Fantasque Sans Mono-Regular:size=10
+URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=10
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
 !URxvt*background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
-URxvt.internalBorder: 15
+URxvt.internalBorder: 20
 !URxvt*transparent: true
 urxvt*shading: 24
 !URxvt*blurRadius: 20

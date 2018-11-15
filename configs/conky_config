@@ -1,50 +1,340 @@
+##### domino clock - a conky file by theMuspilli.deviantart.com
+##
+## for version 1.0.9.x
+## This configuration file can be found here:
+## http://theMuspilli.deviantArt.com/gallery/49888562/customize
+##################################################################
+
+# in case the images change
+# imlib_cache_flush_interval 120
+
+### YOUR CHANGES
+### Things you have to change:
+# point this to the directory to which you have unpacked this conky
+template1 $HOME/toinstall/configs/domino_clock
+
+### Things you might want to change:
+# lines 25-27: window position
+# line 46: transparency
+# line 52: how often is the display updated (default: every 5 seconds)
+### END OF YOUR CHANGES ###############################################
+
+#####
+## WINDOW SIZE & POSITIONING
+############################
+alignment bl # top left
+gap_x 750
+gap_y 250
+minimum_size 374 200
+maximum_width 374
+
+#####
+## GENERAL WINDOW SETTINGS
+##########################
+
+own_window_title conky_domino_clock
 
 background yes
-update_interval 1
-
-cpu_avg_samples 2
-net_avg_samples 2
-temperature_unit celsius
-
-double_buffer yes
-no_buffers yes
-text_buffer_size 2048
-
-gap_x 540
-gap_y 500
-minimum_size 500 700 
-maximum_width 400
 own_window yes
-own_window_type override 
-own_window_transparent yes
+
+own_window_type override
+own_window_hints undecorated,below,sticky,skip_taskbar,skip_pager
+
+own_window_transparent no
+
 own_window_argb_visual yes
-own_window_argb_value o
-own_window_hints undecorated,sticky,skip_taskbar,skip_pager,below
-border_inner_margin 0
-border_outer_margin 0
-alignment tl
+own_window_argb_value 0 #0 = full transparency; 255 = full opacity
 
-draw_shades yes
-draw_outline no
-draw_borders no
-draw_graph_borders no
-default_shade_color 000000
+#####
+## UPDATE INTERVAL
+##################
 
-override_utf8_locale yes
-use_xft yes
-xftfont Open Sans:size=10
-xftalpha 1
-uppercase no
+update_interval 5 # refresh every 5 seconds, not every second
 
-default_color FFFFFF
-color1 DDDDDD
-color2 AAAAAA
-color3 888888
-color4 EF5A29
+#####
+## DOUBLE BUFFERING
+###################
 
+double_buffer yes # reduces flicker, may not work for everyone
+no_buffers yes
 
-
+#####
+## stuff after 'TEXT' will be formatted on screen
+#################################################
 TEXT
-${font Roboto Condensed:weight=Light :size=98}${time %H:%M}${font}
-
-${font Roboto Condensed:weight=Light:size=22} ${time %d %B | %A}${font}
+# hour - one domino stone
+${if_match ${time %I}==1} ${image ${template1}/01.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==2} ${image ${template1}/02a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==3} ${image ${template1}/03a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==4} ${image ${template1}/04a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==5} ${image ${template1}/05a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==6} ${image ${template1}/06a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==7} ${image ${template1}/07a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==8} ${image ${template1}/08a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==9} ${image ${template1}/09a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==10} ${image ${template1}/10a.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==11} ${image ${template1}/11.png -p 0,0 -s 100x188} ${else}\
+${if_match ${time %I}==12} ${image ${template1}/12.png -p 0,0 -s 100x188} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}
+####
+## Minutes, let the madness begin!
+###################################
+## a nicer approach dealing with the stones stone by stone like this
+## ${if_match ${execi 30 ${date "+%M" | head -c 1}==0}} ${image ${template1}/00.png -p 134,0 -s 100x188} ${else} ...
+## and
+## ${if_match ${execi 10 ${date "+%M" | tail -c 2}==0}} ${image ${template1}/00.png -p 270,0 -s 100x188} ${else} ...
+## did not work, so here a brute force attempt which might be better 
+## anyway, because it doesn't need 16 execi calls, but stays in conky 
+## - even though it ifs the living hell of an if construct with 59 elses. 
+## But again: that all is internal (at least that).
+##########################################################################
+# minutes 0 to 9
+${if_match ${time %M}==0} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==1} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==2} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==3} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==4} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==5} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==6} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==7} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==8} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==9} \
+${image ${template1}/00.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${else} \
+## minutes 10-19
+${if_match ${time %M}==10} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==11} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==12} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==13} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==14} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==15} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==16} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==17} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==18} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==19} \
+${image ${template1}/01.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${else} \
+## minutes 20-29
+${if_match ${time %M}==20} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==21} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==22} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==23} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==24} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==25} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==26} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==27} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==28} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==29} \
+${image ${template1}/02b.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${else} \
+## minutes 30-39
+${if_match ${time %M}==30} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==31} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==32} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==33} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==34} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==35} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==36} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==37} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==38} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==39} \
+${image ${template1}/03b.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${else} \
+## minutes 40-49
+${if_match ${time %M}==40} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==41} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==42} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==43} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==44} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==45} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==46} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==47} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==48} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==49} \
+${image ${template1}/04c.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${else} \
+## minutes  50-59
+${if_match ${time %M}==50} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/00.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==51} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/01.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==52} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/02b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==53} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/03b.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==54} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/04c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==55} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/05c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==56} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/06d.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==57} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/07c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==58} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/08c.png -p 270,0 -s 100x188} \
+${else} \
+${if_match ${time %M}==59} \
+${image ${template1}/05c.png -p 134,0 -s 100x188} \
+${image ${template1}/09a.png -p 270,0 -s 100x188} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif} \
+${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}${endif}
