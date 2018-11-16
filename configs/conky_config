@@ -48,7 +48,7 @@ conky.config = {
     default_outline_color = 'white',
     default_shade_color = 'white',
     default_bar_height = 10,
-
+    
     draw_borders = false,
     draw_outline = false,
     draw_shades = false,
@@ -76,7 +76,7 @@ conky.config = {
     show_graph_scale = false,
     show_graph_range = false,
 
-    top_name_width = 10,
+    top_name_width = 20,
 }
 
 -- "4169E1": Royal Blue
@@ -98,6 +98,9 @@ ${color yellow}${membar}
 
 ${color}Disk$alignr$color ${fs_used /} / ${fs_size /}
 ${color yellow}${fs_bar /}${color}
+
+${color}Home$alignr$color ${fs_used /home} / ${fs_size /home}
+${color yellow}${fs_bar /home}${color}
 
 Trends
 ${hr 2}
@@ -121,7 +124,7 @@ ${voffset 0}${color} Up Speed${color} $alignr ${upspeed wlp3s0}
 ${voffset 0}${color} Down Speed${color} $alignr ${downspeed wlp3s0}
 ${voffset 0} ${downspeedgraph wlp3s0 50,0 FF0000 FFFF00 -l}
 
-${color}Process        PID   CPU%   MEM%
+${color}Process                  PID   CPU%   MEM%
 ${hr 2}
 ${color FF0000} ${top name 1} ${top pid 1} ${top cpu 1} ${top mem 1}
 ${color FF5000} ${top name 2} ${top pid 2} ${top cpu 2} ${top mem 2}
@@ -130,9 +133,6 @@ ${color yellow} ${top name 4} ${top pid 4} ${top cpu 4} ${top mem 4}
 ${color white} ${top name 5} ${top pid 5} ${top cpu 5} ${top mem 5}
 ${color white} ${top name 6} ${top pid 6} ${top cpu 6} ${top mem 6}
 ${color white} ${top name 7} ${top pid 7} ${top cpu 7} ${top mem 7}
-${color white} ${top name 8} ${top pid 8} ${top cpu 8} ${top mem 8}
-${color white} ${top name 9} ${top pid 9} ${top cpu 9} ${top mem 9}
-${color white} ${top name 10} ${top pid 10} ${top cpu 10} ${top mem 10}
 ${hr 2}
 
 ${alignc}Battery: ${exec cat /sys/class/power_supply/BAT0/capacity}%
