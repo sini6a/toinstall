@@ -57,3 +57,9 @@ powerline-fonts
 redshift
 geany
 awesome-terminal-fonts
+
+openbox
+lxappearance-obconf
+obconf
+obmenu
+numix-gtk-theme

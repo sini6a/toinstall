@@ -1,0 +1,12 @@
+tint2 &
+nitrogen --restore &
+setxkbmap -layout us,mk -option grp:caps_switch &
+xautolock -time 10 -locker 'i3lock-fancy -f Fantasque-Sans-Mono-Bold -g' &
+thunar --daemon &
+xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
+(sleep 1  && volumeicon) &
+(sleep 2 && cbatticon) &
+(sleep 2 && nm-applet) &
+(sleep 2 && caffeine) &
+(sleep 2 && transmission-gtk -m) &
+(sleep 2 && redshift-gtk) &

@@ -9,7 +9,7 @@ URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
 !URxvt*background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
-URxvt.internalBorder: 20
+URxvt.internalBorder: 15
 !URxvt*transparent: true
 urxvt*shading: 24
 !URxvt*blurRadius: 20

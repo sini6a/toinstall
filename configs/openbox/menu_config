@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openbox_menu xmlns="http://openbox.org/3.4/menu">
+	<menu id="root-menu" label="Openbox 3">
+		<item label="sensors">
+			<action name="Execute">
+				<execute>urxvt -e watch -n 0.5 sensors</execute>
+			</action>
+		</item>
+		<item label="htop">
+			<action name="Execute">
+				<execute>urxvt -e htop</execute>
+			</action>
+		</item>
+		<item label="urxvt">
+			<action name="Execute">
+				<execute>urxvt</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="firefox">
+			<action name="Execute">
+				<execute>firefox</execute>
+			</action>
+		</item>
+		<item label="chromium">
+			<action name="Execute">
+				<execute>chromium</execute>
+			</action>
+		</item>
+		<item label="transmission-gtk">
+			<action name="Execute">
+				<execute>transmission-gtk</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="geany">
+			<action name="Execute">
+				<execute>geany</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="thunar">
+			<action name="Execute">
+				<execute>thunar</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="gscreenshot">
+			<action name="Execute">
+				<execute>gscreenshot</execute>
+			</action>
+		</item>
+		<item label="pyradio">
+			<action name="Execute">
+				<execute>urxvt -e pyradio --stations ~/toinstall/stations.csv</execute>
+			</action>
+		</item>
+		<item label="camera">
+			<action name="Execute">
+				<execute>ffplay -an rtsp://192.168.1.200:554/11</execute>
+			</action>
+		</item>
+		<separator/>
+		<item label="deadbeef">
+			<action name="Execute">
+				<execute>deadbeef</execute>
+			</action>
+		</item>
+		<separator/>
+		<menu id="root-menu-264035" label="openbox">
+			<item label="reconfigure">
+				<action name="Reconfigure"/>
+			</item>
+			<item label="restart">
+				<action name="Restart"/>
+			</item>
+			<separator/>
+			<item label="obconf">
+				<action name="Execute">
+					<execute>obconf</execute>
+				</action>
+			</item>
+			<item label="obmenu">
+				<action name="Execute">
+					<execute>obmenu</execute>
+				</action>
+			</item>
+			<item label="lxappearance">
+				<action name="Execute">
+					<execute>lxappearance</execute>
+				</action>
+			</item>
+		</menu>
+		<menu id="System" label="system">
+			<item label="update">
+				<action name="Execute">
+					<execute>urxvt --hold -e yay -Syu</execute>
+				</action>
+			</item>
+			<separator/>
+			<item label="reboot">
+				<action name="Execute">
+					<execute>reboot</execute>
+				</action>
+			</item>
+			<item label="shutdown">
+				<action name="Execute">
+					<execute>shutdown now</execute>
+				</action>
+			</item>
+		</menu>
+		<separator/>
+		<item label="logout">
+			<action name="Exit"/>
+		</item>
+	</menu>
+</openbox_menu>

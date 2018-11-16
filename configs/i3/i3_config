@@ -71,7 +71,7 @@ bindsym F7 exec light -A 10
 
 # For gaps and no borders
 for_window [class="^.*"] border pixel 0
-gaps inner 10
+# gaps inner 10
 # gaps outer 5
 
 # print window titles of firefox windows red
