@@ -58,8 +58,13 @@ redshift
 geany
 awesome-terminal-fonts
 
+wmctrl
+imagemagick
+
 openbox
 lxappearance-obconf
 obconf
 obmenu
 numix-gtk-theme
+
+

@@ -8,12 +8,13 @@ URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=10
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 
-!URxvt*background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
+URxvt.background.expr: 'rootalign keep { load "$HOME/toinstall/blur.jpg" }'
 URxvt.internalBorder: 15
 !URxvt*transparent: true
-urxvt*shading: 24
+!urxvt*shading: 24
 !URxvt*blurRadius: 20
-urxvt*depth: 64
+urxvt*depth: 32
+URxvt.background: rgba:1111/1111/1111/dddd
 !urxvt*background: rgba:0000/0000/0200/c800
 
 ! URXVT ENABLE LINK SUPPORT

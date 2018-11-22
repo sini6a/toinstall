@@ -52,27 +52,28 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 # AUTOSTART
 # exec --no-startup-id xrandr --output default --primary
 # exec --no-startup-id xrdb ~/.Xresources
-# exec --no-startup-id compton
+exec --no-startup-id compton
 # exec --no-startup-id conky
 
-exec --no-startup-id ~/.fehbg
-exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65
-exec --no-startup-id thunar --daemon
-exec --no-startup-id transmission-gtk -m
-exec --no-startup-id volumeicon
-exec --no-startup-id nm-applet
-exec --no-startup-id cbatticon
-exec --no-startup-id redshift-gtk
-exec --no-startup-id caffeine
+exec --no-startup-id ~/.fehbg &
+# exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
+exec --no-startup-id thunar --daemon &
+exec --no-startup-id transmission-gtk -m &
+exec --no-startup-id volumeicon &
+exec --no-startup-id nm-applet &
+exec --no-startup-id cbatticon &
+exec --no-startup-id redshift-gtk &
+exec --no-startup-id caffeine &
+exec --no-startup-id $HOME/toinstall/scripts/wallpaper_blur.sh -t 0.05 &
 
 #LIGHTS
 bindsym F6 exec light -U 10
 bindsym F7 exec light -A 10
 
 # For gaps and no borders
-for_window [class="^.*"] border pixel 0
-# gaps inner 10
-# gaps outer 5
+for_window [class="^.*"] border pixel 3
+gaps inner 15
+gaps outer 5
 
 # print window titles of firefox windows red
 
@@ -86,7 +87,7 @@ bindsym --release Num_Lock  exec pkill -SIGRTMIN+11 i3blocks
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
-font pango:Sans 7 
+font pango:Fantasque Sans Mono 7
 
 # Before i3 v4.8, we used to recommend this one as the default:
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
@@ -120,6 +121,7 @@ set $ia     #8f8f8f
 set $red    #961717
 set $blue   #7F7FFF
 set $gray   #404040
+set $lgray  #d3d3d3
 set $red    #961717
 set $white  #000000
 set $green  #32CD32	
@@ -128,11 +130,18 @@ set $white  #FFFFFF
 set $black  #000000
 set $cyan   #59ffff
 
+# Color Scheme
+set $seablue #05668D40
+set $seaweed #02809050
+set $persiangreen #00A896
+set $caribbeangreen #02C39A
+set $palespringbud #F0F3BD
+
 # set some nice colors      border     background  text
-client.focused              $d3d3d3 $d3d3d3 $tx $d3d3d3
-client.unfocused            $gray $gray $gray $gray
-client.focused_inactive     $gray $gray $ac $gray
-client.urgent               $red         $red          $tx $red
+client.focused              $persiangreen $caribbeangreen $palespringbud $persiangreen
+client.unfocused            $persiangreen $seaweed $persiangreen $persiangreen
+client.focused_inactive     $persiangreen $seaweed $persiangreen $persiangreen
+client.urgent               $persiangreen $palespringbud $persiangreen $persiangreen
 
 # change focus
 bindsym $mod+j focus left
@@ -185,16 +194,16 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # Naming workspaces
-set $tag1 ALPHA
-set $tag2 BETA
-set $tag3 GAMMA
-set $tag4 DELTA
-set $tag5 EPSILON
-set $tag6 ZETA
-set $tag7 ETA
-set $tag8 THETA
-set $tag9 IOTA
-set $tag10 KAPPA
+set $tag1 EINS 
+set $tag2 ZWEI 
+set $tag3 DREI 
+set $tag4 VIER 
+set $tag5 FÜNF 
+set $tag6 SECHS 
+set $tag7 SIEBEN 
+set $tag8 ACHT 
+set $tag9 NEUN 
+set $tag10 NULL 
 
 # switch to workspace
 bindsym $mod+1 workspace 1 $tag1
@@ -262,15 +271,16 @@ bar {
 	height 32
 	status_command i3blocks
 	position top
-        tray_output Primary 
+        tray_output LVDS-0
 colors {
-	statusline #d3d3d3
-	background $gray
+	statusline $caribbeangreen
+	background $seablue
+    separator $seaweed
             					    #Border #Backgr #Font
-		    	 focused_workspace  $gray $gray $cyan
-      			 active_workspace   #FFFF7F #FFFF7F $gray
-      			 inactive_workspace $gray $gray $white
-      			 urgent_workspace   $white $white $gray
+		    	 focused_workspace  $persiangreen $seaweed $caribbeangreen
+      			 active_workspace   $persiangreen $seaweed $caribbeangreen
+      			 inactive_workspace $seaweed $seablue $persiangreen
+      			 urgent_workspace   $persiangreen $seaweed $palespringbud
         }
 }
 

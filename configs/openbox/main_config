@@ -320,43 +320,36 @@
         <command>kfmclient openProfile filemanagement</command>
       </action>
     </keybind>
-    
     <!-- CUSTOM KEYBINDINGS -->
     <keybind key="A-d">
-    <action name="Execute">
-    <command>rofi -i -show run -font "Fantasque Sans Mono 10" -m 0 -location center</command>
-    </action>
+      <action name="Execute">
+        <command>rofi -i -show run -font "Fantasque Sans Mono 10" -m 0 -location center</command>
+      </action>
     </keybind>
-    
     <keybind key="A-c">
-    <action name="Execute">
-    <command>chromium</command>
-    </action>
+      <action name="Execute">
+        <command>firefox</command>
+      </action>
     </keybind>
-    
     <keybind key="A-x">
-    <action name="Execute">
-    <command>thunar</command>
-    </action>
+      <action name="Execute">
+        <command>thunar</command>
+      </action>
     </keybind>
-    
     <keybind key="A-s-q">
-    <action name="Close">
+      <action name="Close">
     </action>
     </keybind>
-    
     <keybind key="A-e">
-    <action name="Execute">
-    <command>urxvt</command>
-    </action>
+      <action name="Execute">
+        <command>urxvt</command>
+      </action>
     </keybind>
-    
     <keybind key="A-w">
-    <action name="Execute">
-    <command>geany</command>
-    </action>
+      <action name="Execute">
+        <command>geany</command>
+      </action>
     </keybind>
-    
   </keyboard>
   <mouse>
     <dragThreshold>1</dragThreshold>
@@ -812,9 +805,8 @@
 
   # end of the example
 -->
-
-     <application class="*">
-         <decor>no</decor>
+    <application class="*">
+      <decor>no</decor>
     </application>
   </applications>
 </openbox_config>

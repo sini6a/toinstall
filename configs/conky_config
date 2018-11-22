@@ -31,7 +31,7 @@ conky.config = {
     gap_x = 20,
     gap_y = 0,
     minimum_width = 300,
-    minimum_height = 1015,
+    minimum_height = 1080,
     border_width = 5,
     background = true,
     
@@ -42,7 +42,7 @@ conky.config = {
     own_window_type = 'desktop',
     own_window_colour = 'black', -- background color
     own_window_argb_visual = true,
-    own_window_argb_value = 230, -- 0 (transparent) to 255 (opaque)
+    own_window_argb_value = 55, -- 0 (transparent) to 255 (opaque)
     
     default_color = 'white',
     default_outline_color = 'white',
