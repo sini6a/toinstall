@@ -22,7 +22,4 @@ echo "-> ACPID Enabled." && sleep 1
 # Enable and configure NetworkManager
 sudo systemctl enable NetworkManager
 sudo gpasswd -a $(whoami) users
-# Enable SLIM
-sudo systemctl enable slim
-echo "-> SLIM Enabled." && sleep 1
 

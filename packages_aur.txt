@@ -1,12 +1,9 @@
-luv-icon-theme-git
 otf-fantasque-sans-mono
 gscreenshot
 caffeine-ng
-pop-gtk-theme-bin
 i3-gaps-next-git
 i3blocks-gaps-git
 pyradio-git
-slim-theme-arch-tetra
 i3lock-color-git
 i3lock-fancy-git
 light
