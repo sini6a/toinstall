@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 #FOR SCREEN LOCKING (xautolock & i3lock-fancy-git)
 exec --no-startup-id xautolock -time 10 -locker 'i3lock-fancy -f Fantasque-Sans-Mono-Bold -g'
@@ -18,8 +18,7 @@ bindsym $mod+Shift+z exec xautolock -locknow
 # SHORTCUTS
 bindsym $mod+C exec firefox 
 bindsym $mod+X exec thunar
-bindsym $mod+U exec urxvt --hold -e yay -Syu && echo "System upgrade completed!" && sleep infinity
-bindsym Shift+Enter exec gscreenshot
+bindsym $mod+U exec urxvt --hold -e yay
 
 # FOR WINDOW
 for_window [class="(?i)thunar"] floating enable
@@ -52,7 +51,7 @@ exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 # AUTOSTART
 # exec --no-startup-id xrandr --output default --primary
 # exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton
+exec --no-startup-id compton &
 # exec --no-startup-id conky
 
 exec --no-startup-id ~/.fehbg &
