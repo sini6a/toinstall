@@ -3,8 +3,8 @@
 ! URXVT FONTS
 !------------------------------------------------
 
-URxvt*font: xft:Fantasque Sans Mono-Regular:size=10
-URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=10
+URxvt*font: xft:Fantasque Sans Mono-Regular:size=12
+URxvt*boldFont: xft:Fantasque Sans Mono-Bold:size=12
 URxvt*letterSpace: 0
 URxvt*allow_bold: true
 

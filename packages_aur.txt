@@ -1,4 +1,5 @@
 otf-fantasque-sans-mono
+yay
 gscreenshot
 caffeine-ng
 i3-gaps-next-git

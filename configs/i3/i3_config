@@ -49,13 +49,13 @@ focus_follows_mouse no
 exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
 
 # AUTOSTART
-# exec --no-startup-id xrandr --output default --primary
+exec --no-startup-id xrandr --output DVI-D-0 --primary
 # exec --no-startup-id xrdb ~/.Xresources
-exec --no-startup-id compton &
+# exec --no-startup-id compton &
 # exec --no-startup-id conky
 
 exec --no-startup-id ~/.fehbg &
-# exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
+exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id transmission-gtk -m &
 exec --no-startup-id volumeicon &
@@ -71,8 +71,8 @@ bindsym F7 exec light -A 10
 
 # For gaps and no borders
 for_window [class="^.*"] border pixel 3
-gaps inner 15
-gaps outer 5
+#gaps inner 15
+#gaps outer 5
 
 # print window titles of firefox windows red
 
@@ -266,11 +266,11 @@ bindsym $mod+r mode "resize"
 bar {
 	i3bar_command i3bar -t
     	strip_workspace_numbers yes
-	font xft:Fantasque Sans Mono Bold 8
+	font xft:Fantasque Sans Mono Bold 10
 	height 32
 	status_command i3blocks
 	position top
-        tray_output LVDS-0
+        tray_output Primary
 colors {
 	statusline $caribbeangreen
 	background $seablue
