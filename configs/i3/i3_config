@@ -12,7 +12,6 @@
 set $mod Mod4
 
 #FOR SCREEN LOCKING (xautolock & i3lock-fancy-git)
-exec --no-startup-id xautolock -time 10 -locker 'i3lock-fancy -f Fantasque-Sans-Mono-Bold -g'
 bindsym $mod+Shift+z exec xautolock -locknow
 
 # SHORTCUTS
@@ -46,16 +45,17 @@ bindsym $mod+Shift+s sticky toggle
 focus_follows_mouse no
 
 # KEYBOARD LAYOUT
-exec --no-startup-id "setxkbmap -layout us,mk -option grp:caps_switch"
+exec --no-startup-id "setxkbmap -layout 'us,mk,se' -option grp:alt_shift_toggle"
 
 # AUTOSTART
-exec --no-startup-id xrandr --output DVI-D-0 --primary
+exec --no-startup-id xrandr --output LVDS --primary &
 # exec --no-startup-id xrdb ~/.Xresources
-# exec --no-startup-id compton &
+exec --no-startup-id picom --config /etc/xdg/picom.conf &
 # exec --no-startup-id conky
 
+exec --no-startup-id gxkb &
 exec --no-startup-id ~/.fehbg &
-exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
+# exec --no-startup-id xcompmgr -c -C -l 0 -t 0 -r 3 -o .65 &
 exec --no-startup-id thunar --daemon &
 exec --no-startup-id transmission-gtk -m &
 exec --no-startup-id volumeicon &
@@ -63,7 +63,6 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id cbatticon &
 exec --no-startup-id redshift-gtk &
 exec --no-startup-id caffeine &
-exec --no-startup-id $HOME/toinstall/scripts/wallpaper_blur.sh -t 0.05 &
 
 #LIGHTS
 bindsym F6 exec light -U 10
@@ -71,7 +70,7 @@ bindsym F7 exec light -A 10
 
 # For gaps and no borders
 for_window [class="^.*"] border pixel 3
-#gaps inner 15
+gaps inner 15
 #gaps outer 5
 
 # print window titles of firefox windows red
@@ -268,7 +267,7 @@ bar {
     	strip_workspace_numbers yes
 	font xft:Fantasque Sans Mono Bold 10
 	height 32
-	status_command i3blocks
+	status_command SCRIPT_DIR=/usr/lib/i3blocks i3blocks
 	position top
         tray_output Primary
 colors {
