@@ -19,7 +19,7 @@ clear
 echo "--> timedatectl configured <--"
 echo "--> chroot.sh copied to /mnt <--"
 echo "--> Pacstrap-ing into /mnt - base & base-devel packages <--"
-pacstrap /mnt base base-devel --needed || sleep infinity
+pacstrap /mnt base base-devel linux-firmware linux --needed || sleep infinity
 sleep 1
 clear
 

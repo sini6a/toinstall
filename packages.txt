@@ -52,10 +52,6 @@ deepin-icon-theme
 wmctrl
 imagemagick
 
-openbox
-lxappearance-obconf
-obconf
-obmenu
-numix-gtk-theme
-
+equilux-theme
+xorg-xinit
 

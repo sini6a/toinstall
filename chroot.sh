@@ -34,7 +34,7 @@ echo "--> chrooted and chroot.sh executed! <--"
 echo "--> Timezone & locales configured! <--"
 echo "--> Hostname set successfully! <--"
 echo "--> Installing netctl dependecies for wifi-menu <--"
-pacman -S vim iw wpa_supplicant wpa_actiond dialog --noconfirm || sleep infinity
+pacman -S vim iw wpa_supplicant netctl dhcpcd dialog --noconfirm || sleep infinity
 sleep 1
 clear
 
