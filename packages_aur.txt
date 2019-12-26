@@ -8,3 +8,4 @@ pyradio-git
 i3lock-color-git
 i3lock-fancy-git
 light
+i3blocks-contrib
