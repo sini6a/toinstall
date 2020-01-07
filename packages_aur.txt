@@ -3,7 +3,7 @@ yay
 gscreenshot
 caffeine-ng
 i3-gaps-next-git
-i3blocks-gaps-git
+i3blocks-git
 pyradio-git
 i3lock-color-git
 i3lock-fancy-git
